@@ -1,9 +1,9 @@
 
 ## The Board
 
-![The Board](../img/board.jpg)
+[<img src="../img/board_render.jpg" width=750>](../img/board_render.jpg)
 
-Gerber files can be found in the [releases section](https://github.com/Hypfer/WiFiFanCon), but you can also just create them yourself using KiCAD 6
+Gerber files can be found in the [releases section](https://github.com/Hypfer/WiFiFanCon/releases), but you can also just create them yourself using KiCAD 6
 
 
 ## Required parts
@@ -33,6 +33,7 @@ To build one of these you will need:
   I've used the RECOM R-785.0-1.0, which is very efficient and doesn't require any other components
 
 - 0-2x 10uF 16v or similar cap
+
   Your voltage regulator might need those
 
 
