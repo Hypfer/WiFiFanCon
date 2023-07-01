@@ -1,23 +1,25 @@
 # WiFiFanCon
 
-Control 12V PC Fans via Wi-Fi
+Control 12V PC Fans via Wi-Fi and [Tasmota](https://github.com/arendst/Tasmota)
 
 [<img src="./img/board.jpg" width=650>](./img/board.jpg)
+[<img src="./img/tasmota_home.png">](./img/board.jpg)
 
 ## Features
 
-- Control up to four 4-Pin PWM 12V PC Fans via MQTT
-- Monitor the Fan Speed
-- Optionally extend the system with a temperature probe thanks to the available extension headers
-- Very easy THT soldering
-- Put it in a safely isolated 45ct junction box and never touch it again
-- Do firmware updates via ArduinoOTA
-- Admire the silkscreen cat
-- ???
+- Support of up to four 4-Pin PWM 12V PC Fans
+- Individual RPM Monitoring for all 4 Fans
+- Full control via a Webinterface
+- Optional MQTT support with Home Assistant Autodiscovery utilizing [hct](https://github.com/fmtr/hct)
+- Extension headers to allow for customization with e.g. additional temperature probes
+- Very easy beginner-friendly THT soldering
+- Fits snugly into an isolated 45ct junction box
 
 ## Where?
 
-Head over to the [./pcb](./pcb) and [./firmware](./firmware) folders for the pcb and firmware.
+Head over to the [./pcb](./pcb) for the pcb.
+
+For the firmware, install [Tasmota](https://github.com/arendst/Tasmota) e.g. using their fancy fully browser-based installer, then check out the [./berry](./berry) folder.
 
 ## Why?
 
@@ -40,7 +42,6 @@ How else would you do that if not via MQTT automated by Home Assistant?
 
 As it turns out, the ESP32 offers everything required for such a project.
 It has Wi-Fi, it can do 25kHz PWM with more than 4 channels and it is also capable of monitoring the Fan speed.
-
 Furthermore, as it is available as a full devkit PCB, flashing, soldering and everything else is very easy.
 
 Therefore, I basically just needed to design a PCB that features a DC Jack, some Fan Headers and connects everything in a neat package.
