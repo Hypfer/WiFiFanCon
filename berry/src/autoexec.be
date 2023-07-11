@@ -18,10 +18,10 @@ else
 end
 
 var configuredFans = 0
-var configuredCounters = tasmota.cmd("counter")
+var configuredPWMs = tasmota.cmd("pwm")
 
-if configuredCounters.has("Counter1")
-    configuredFans = configuredCounters.size()
+if configuredPWMs.has("PWM")
+    configuredFans = configuredPWMs["PWM"].size()
 end
 
 if configuredFans < 1
@@ -29,7 +29,7 @@ if configuredFans < 1
 else
     print(str(configuredFans) + " fan(s) configured")
     
-    for i: 1..tasmota.cmd("counter").size()
+    for i: 1..configuredFans
         tasmota.add_driver(Fan(i))
     end
 end

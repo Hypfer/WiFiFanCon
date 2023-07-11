@@ -50,7 +50,7 @@ meaning that e.g. GPIO16 in Tasmota would be set up as Counter 1 and GPIO17 in T
 
 **Note**:
 If you don't need all four fan headers, don't configure their GPIOs.
-The amount of configured Counter GPIOs controls how many Fans will show up in the Web and via MQTT.
+The amount of configured PWM GPIOs controls how many Fans will show up in the Web and via MQTT.
 Make sure that your IDs configured in Tasmota start at 1 and don't skip any number.
 Also, keep in mind that the FAN1 header doesn't strictly have to be PWM/Counter 1 in Tasmota.
 

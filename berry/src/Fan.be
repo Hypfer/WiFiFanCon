@@ -106,7 +106,7 @@ class Fan : Driver
     end
     
     def update_rpm()
-        var currentRPM = tasmota.cmd("counter")['Counter' + str(self.id)]; 
+        var currentRPM = tasmota.cmd("counter" + str(self.id))['Counter' + str(self.id)]; 
         # 2 counts per rotation. Assuming a 30s update interval we can take the value as-is
         
         # reset
